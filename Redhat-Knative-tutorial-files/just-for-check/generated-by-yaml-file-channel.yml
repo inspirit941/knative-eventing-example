@@ -1,0 +1,48 @@
+apiVersion: messaging.knative.dev/v1beta1
+kind: KafkaChannel
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"messaging.knative.dev/v1beta1","kind":"KafkaChannel","metadata":{"annotations":{},"name":"my-events-ch","namespace":"default"}}
+    messaging.knative.dev/subscribable: v1
+  creationTimestamp: "2022-03-06T07:26:02Z"
+  finalizers:
+  - kafkachannels.messaging.knative.dev
+  generation: 1
+  name: my-events-ch
+  namespace: default
+  resourceVersion: "125276251"
+  selfLink: /apis/messaging.knative.dev/v1beta1/namespaces/default/kafkachannels/my-events-ch
+  uid: 2a9db017-e893-4417-8b15-4dc0a25b2e5c
+spec:
+  numPartitions: 1
+  replicationFactor: 1
+status:
+  address:
+    url: http://my-events-ch-kn-channel.default.svc.cluster.local
+  conditions:
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: Addressable
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: ChannelServiceReady
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: ConfigurationReady
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: DispatcherReady
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: EndpointsReady
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: ServiceReady
+  - lastTransitionTime: "2022-03-06T07:26:02Z"
+    status: "True"
+    type: TopicReady
+  observedGeneration: 1
